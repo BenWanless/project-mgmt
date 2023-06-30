@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+## About The Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was undertaken with the primary goal of expanding and deepening my knowledge of GraphQL, Apollo, React, and MongoDB. It served as an opportunity for me to dive into these technologies and gain hands-on experience in their implementation. The project itself is a comprehensive and user-friendly project management site, designed to streamline the process of organizing and tracking crucial information related to clients and their projects.
 
-## Available Scripts
+The site offers a range of features that allow users to efficiently manage client data. It enables the storage and retrieval of essential client details, including phone numbers, email addresses, and names. Additionally, it provides a convenient interface for users to view and update project-specific information, such as statuses, descriptions, and titles. By associating clients with their respective projects, the site ensures a seamless workflow, allowing users to quickly access all relevant information in one central location.
 
-In the project directory, you can run:
+Furthermore, the project management site offers robust functionality for editing and deleting project information. This flexibility enables users to adapt and modify project details as circumstances evolve, ensuring accurate and up-to-date records. The inclusion of such capabilities highlights the site's commitment to facilitating efficient project management and enhancing user productivity.
 
-### `npm start`
+Throughout the development process, I encountered various challenges that pushed me to explore and learn more about GraphQL, Apollo, React, and MongoDB. From setting up the initial architecture to implementing complex queries and mutations, each step presented valuable learning opportunities. By overcoming these challenges, I not only expanded my technical skill set but also gained a deeper understanding of the inner workings of these technologies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In conclusion, embarking on this project has been an immensely rewarding experience. It has allowed me to apply my knowledge and skills to create a practical and functional project management site. The hands-on nature of the project has provided me with a solid foundation in GraphQL, Apollo, React, and MongoDB, enabling me to tackle future endeavors with increased confidence and proficiency.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Certainly! Here's the updated structure with badges and links for Mongoose and React Router DOM:
 
-### `npm test`
+### Technogies
+[![Apollo][Apollo-badge]][Apollo-url]
+[![GraphQL][GraphQL-badge]][GraphQL-url]
+[![MongoDB][MongoDB-badge]][MongoDB-url]
+[![Mongoose][Mongoose-badge]][Mongoose-url]
+[![React Router DOM][ReactRouterDOM-badge]][ReactRouterDOM-url]
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Instalation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Set up your server environment variables
+   ```env
+   NODE_ENV = 'development'
+   PORT = 8000
+   MONGO_URI = 'mongodb+srv://<username>:<password>@cluster0.txwe9rs.mongodb.net/mgmt_db?retryWrites=true&w=majority'
+    ```
+4. Start the server and client
+  - Server
+    ```sh
+    npm run dev
+    ```
+  - Client
+    ```sh
+    npm start
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To add a new client, simply click the "Add Client" button. This action triggers a modal window where you can conveniently input all the necessary information for the new client (Figure 1).
 
-### `npm run eject`
+https://github.com/BenWanless/project-mgmt/assets/91068776/bd4d4496-5930-47d5-87fd-f7625c60a0cb
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Figure 1: An example showing adding a new user.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+For adding a new project, click the "New Project" button. This action displays a modal window where you can provide all the relevant project details. Additionally, you can establish a link between the project and a specific client (Figure 2).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+https://github.com/BenWanless/project-mgmt/assets/91068776/72ba41cd-254a-410b-b2e3-1e543270e463
 
-## Learn More
+Figure 2: An example showing adding a new project with a client.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To edit an existing project, locate the project card and click the "View" button. This action redirects you to the project details page, granting you access to view and modify various aspects of the project. Here, you can effortlessly update the project's status, description, and name according to your requirements (Figure 3).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://github.com/BenWanless/project-mgmt/assets/91068776/38248186-e795-4eb0-8a21-38532c12cf29
 
-### Code Splitting
+Figure 3: An example of updating the project status. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Roadmap
 
-### Analyzing the Bundle Size
+- [ ] Add front end validation for form fields. 
+- [ ] Update project edit form
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact
 
-### Making a Progressive Web App
+Feel free to reach out to me via email or connect with me on LinkedIn:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+[![Email][Email-badge]][Email-url]
+[![LinkedIn][LinkedIn-badge]][LinkedIn-url]
 
-### Advanced Configuration
+I would be glad to connect and engage in any professional discussions or collaborations. Don't hesitate to get in touch!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Apollo-badge]: https://img.shields.io/badge/Apollo-311C87?style=for-the-badge&logo=apollo-graphql&logoColor=white
+[Apollo-url]: https://www.apollographql.com/
+[GraphQL-badge]: https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white
+[GraphQL-url]: https://graphql.org/
+[MongoDB-badge]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/
+[Mongoose-badge]: https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white
+[Mongoose-url]: https://mongoosejs.com/
+[ReactRouterDOM-badge]: https://img.shields.io/badge/React_Router_DOM-CA4245?style=for-the-badge&logo=react-router-dom&logoColor=white
+[ReactRouterDOM-url]: https://reactrouter.com/
+[Email-badge]: https://img.shields.io/badge/Email-bwanless%40hotmail.ca-D14836?style=for-the-badge&logo=hotmail&logoColor=white
+[Email-url]: mailto:bwanless@hotmail.ca
+[LinkedIn-badge]: https://img.shields.io/badge/LinkedIn-Ben_Wanless-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[LinkedIn-url]: https://www.linkedin.com/in/benwanless/

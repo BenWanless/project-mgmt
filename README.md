@@ -10,7 +10,6 @@ Throughout the development process, I encountered various challenges that pushed
 
 In conclusion, embarking on this project has been an immensely rewarding experience. It has allowed me to apply my knowledge and skills to create a practical and functional project management site. The hands-on nature of the project has provided me with a solid foundation in GraphQL, Apollo, React, and MongoDB, enabling me to tackle future endeavors with increased confidence and proficiency.
 
-Certainly! Here's the updated structure with badges and links for Mongoose and React Router DOM:
 
 ### Technogies
 [![Apollo][Apollo-badge]][Apollo-url]

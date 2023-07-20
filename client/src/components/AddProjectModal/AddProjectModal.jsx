@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { FaList } from "react-icons/fa";
 import { useMutation, useQuery } from "@apollo/client";
-import { GET_PROJECTS } from "../queries/projectQueries";
-import { ADD_PROJECT } from "../mutations/projectMutations";
-import { GET_CLIENTS } from "../queries/clientsQueries";
+import { GET_PROJECTS } from "../../queries/projectQueries";
+import { ADD_PROJECT } from "../../mutations/projectMutations";
+import { GET_CLIENTS } from "../../queries/clientsQueries";
 
-function AddClientModal() {
+function AddProjectModal() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [clientId, setClientId] = useState("");
@@ -55,7 +55,7 @@ function AddClientModal() {
             data-bs-toggle="modal"
             data-bs-target="#adProjectModal"
           >
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center gap-3">
               <FaList className="icon" />
               <div>New Project</div>
             </div>
@@ -147,4 +147,4 @@ function AddClientModal() {
   );
 }
 
-export default AddClientModal;
+export { AddProjectModal };

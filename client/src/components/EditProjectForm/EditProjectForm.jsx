@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
-import { GET_PROJECT } from "../queries/projectQueries";
-import { UPDATE_PROJECT } from "../mutations/projectMutations";
+import { GET_PROJECT } from "../../queries/projectQueries";
+import { UPDATE_PROJECT } from "../../mutations/projectMutations";
 
-function EditProjectForm({ project }) {
+export function EditProjectForm({ project }) {
   const [name, setName] = useState(project.name);
   const [description, setDescription] = useState(project.description);
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState(project.status);
 
   const [updateProject] = useMutation(UPDATE_PROJECT, {
     variables: { id: project.id, name, description, status },
@@ -20,10 +20,6 @@ function EditProjectForm({ project }) {
     }
 
     updateProject(name, description, status);
-
-    setName("");
-    setDescription("");
-    setStatus("");
   };
 
   return (
@@ -62,10 +58,10 @@ function EditProjectForm({ project }) {
             <option value="completed">Completed</option>
           </select>
         </div>
-        <button className="btn btn-primary">Submit</button>
+        <div className="d-md-flex justify-content-md-end">
+          <button className="btn btn-primary">Submit</button>
+        </div>
       </form>
     </div>
   );
 }
-
-export default EditProjectForm;

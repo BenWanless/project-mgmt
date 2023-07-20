@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { useMutation } from "@apollo/client";
-import { ADD_CLIENT } from "../mutations/clientMutations";
-import { GET_CLIENTS } from "../queries/clientsQueries";
+import { ADD_CLIENT } from "../../mutations/clientMutations";
+import { GET_CLIENTS } from "../../queries/clientsQueries";
+import { formatPhoneNumber } from "../../utilities/formatPhoneNumber";
 
 function AddClientModal() {
   const [name, setName] = useState("");
@@ -32,6 +33,10 @@ function AddClientModal() {
     setPhone("");
   };
 
+  const handlePhoneOnChange = (e) => {
+    setPhone(formatPhoneNumber(e.target.value));
+  };
+
   return (
     <>
       <button
@@ -40,8 +45,8 @@ function AddClientModal() {
         data-bs-toggle="modal"
         data-bs-target="#addClientModal"
       >
-        <div className="d-flex align-items-center">
-          <FaUser className="icon" />
+        <div className="d-flex align-items-center gap-3">
+          <FaUser />
           <div>Add Client</div>
         </div>
       </button>
@@ -94,7 +99,7 @@ function AddClientModal() {
                     className="form-control"
                     id="phone"
                     value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    onChange={handlePhoneOnChange}
                   />
                 </div>
                 <button
@@ -113,4 +118,4 @@ function AddClientModal() {
   );
 }
 
-export default AddClientModal;
+export { AddClientModal };

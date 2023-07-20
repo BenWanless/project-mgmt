@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/Header";
+// import Header from "./components/Header/Header";
+import { Header } from "./components";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -25,7 +26,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: "http://localhost:8000/graphql",
+  uri: "http://localhost:9000/graphql",
   cache,
 });
 

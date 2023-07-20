@@ -1,8 +1,11 @@
 import { FaTrash } from "react-icons/fa";
 import { useMutation } from "@apollo/client";
-import { DELETE_CLIENT } from "../mutations/clientMutations";
-import { GET_CLIENTS } from "../queries/clientsQueries";
-import { GET_PROJECTS } from "../queries/projectQueries";
+
+import { DELETE_CLIENT } from "../../../mutations/clientMutations";
+import { GET_CLIENTS } from "../../../queries/clientsQueries";
+import { GET_PROJECTS } from "../../../queries/projectQueries";
+
+import { Button } from "../../Button";
 
 function ClientRow({ client }) {
   const [deleteClient] = useMutation(DELETE_CLIENT, {
@@ -16,12 +19,10 @@ function ClientRow({ client }) {
       <td>{client.email}</td>
       <td>{client.phone}</td>
       <td>
-        <button className="btn btn-danger btn-sm" onClick={deleteClient}>
-          <FaTrash />
-        </button>
+        <Button icon={<FaTrash />} onClick={deleteClient} />
       </td>
     </tr>
   );
 }
 
-export default ClientRow;
+export { ClientRow };

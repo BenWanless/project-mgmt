@@ -1,18 +1,24 @@
-import AddClientModal from "../components/AddClientModal";
-import AddProjectModal from "../components/AddProjectModal";
-import Clients from "../components/Clients";
-import Projects from "../components/Projects";
+import {
+  AddClientModal,
+  ClientsTable,
+  Projects,
+  AddProjectModal,
+} from "../components";
 
 function Home() {
   return (
     <>
-      <div className="d-flex gap-3 mb-4">
-        <AddClientModal />
+      <div className="d-flex justify-content-between align-items-center">
+        <h2 className="mt-3">Projects</h2>
         <AddProjectModal />
       </div>
       <Projects />
       <hr />
-      <Clients />
+      <div className="d-flex justify-content-between align-items-center">
+        <h2 className="mt-3">Clients</h2>
+        <AddClientModal />
+      </div>
+      <ClientsTable />
     </>
   );
 }

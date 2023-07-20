@@ -18,4 +18,4 @@ function ProjectCard({ project }) {
   );
 }
 
-export default ProjectCard;
+export { ProjectCard };
